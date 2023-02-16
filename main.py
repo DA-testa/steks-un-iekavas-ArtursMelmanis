@@ -27,8 +27,18 @@ def find_mismatch(text):
 def main():
     text = input()
     mismatch = find_mismatch(text)
-    print(mismatch)
-
+    if "F" in text:
+        x = 0
+        while x < 6:
+            with open(f"test/{x}") as fails:
+                text = input()
+                mismatch = find_mismatch(text)
+                print(mismatch)
+                x += 1
+    if "I" in text:
+        text = input()
+        mismatch = find_mismatch(text)
+        print(mismatch)
 
 if __name__ == "__main__":
     main()
