@@ -28,7 +28,7 @@ def main():
     text = input()
     mismatch = find_mismatch(text)
     if "F" in text:
-        for i in range(0,6,1):
+        for x in range(0,6,1):
             with open(f"test/{x}") as fail:
                 text = fail.read()
                 mismatch = find_mismatch(text)
